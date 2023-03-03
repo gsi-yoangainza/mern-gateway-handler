@@ -1,0 +1,11 @@
+*.png
+
+*.svg
+
+*.ico
+
+*.md
+
+yarn.lock
+
+index.html

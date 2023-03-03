@@ -6,9 +6,10 @@ const {
   updateGateway,
   deleteGateway,
 } = require("../controllers/gatewayController");
+const { protect } = require("../middleware/authMiddleware");
 
-router.route("/").get(getGateways).post(setGateway);
+router.route("/").get(protect, getGateways).post(protect, setGateway);
 
-router.route("/:id").put(updateGateway).delete(deleteGateway);
+router.route("/:id").put(protect, updateGateway).delete(protect, deleteGateway);
 
 module.exports = router;

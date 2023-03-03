@@ -1,11 +1,12 @@
 const asyncHandler = require("express-async-handler");
 const Gateway = require("../models/gatewayModel");
+const User = require("../models/userModel");
 
 //@desc     Get gateways
 //@route    GET /api/gateways
 //@access   Private
 const getGateways = asyncHandler(async (req, res) => {
-  const gateways = await Gateway.find();
+  const gateways = await Gateway.find({ user: req.user.id });
 
   res.status(200).json(gateways);
 });
@@ -19,7 +20,7 @@ const setGateway = asyncHandler(async (req, res) => {
   //   res.status(400);
   //   throw new Error("Please add a text field");
   // }
-  const gateway = await Gateway.create(req.body);
+  const gateway = await Gateway.create({ ...req.body, user: req.user.id });
 
   res.status(200).json(gateway);
 });
@@ -33,6 +34,20 @@ const updateGateway = asyncHandler(async (req, res) => {
   if (!gateway) {
     res.status(400);
     throw new Error("Gateway not found");
+  }
+
+  const user = await User.findById(req.user.id);
+
+  // Check for user
+  if (!user) {
+    res.status(401);
+    throw new Error("User not found");
+  }
+
+  //Make sure the logged user matches the gateway user
+  if (gateway.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("User not authorized");
   }
 
   const updatedGateway = await Gateway.findByIdAndUpdate(
@@ -55,6 +70,20 @@ const deleteGateway = asyncHandler(async (req, res) => {
   if (!gateway) {
     res.status(400);
     throw new Error("Gateway not found");
+  }
+
+  const user = await User.findById(req.user.id);
+
+  // Check for user
+  if (!user) {
+    res.status(401);
+    throw new Error("User not found");
+  }
+
+  //Make sure the logged user matches the gateway user
+  if (gateway.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("User not authorized");
   }
 
   await Gateway.findByIdAndDelete(req.params.id);
