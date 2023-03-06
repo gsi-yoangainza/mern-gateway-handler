@@ -12,10 +12,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api/goals", require("./routes/goalRoutes"));
 app.use("/api/gateways", require("./routes/gatewayRoutes"));
+app.use("/api/peripherals", require("./routes/peripheralRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
-// app.use("/api/goals", require("./routes/goalRoutes"));
 
 app.use(errorHandler);
 

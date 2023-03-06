@@ -1,0 +1,910 @@
+{
+  "password": "Contraseña",
+
+  "rememberme": "Recordar",
+
+  "submit": "Entrar",
+
+  "delete": "Eliminar",
+
+  "edit": "Editar",
+
+  "viewDetails": "Ver detalles",
+
+  "rolConfig": "Configurar rol",
+
+  "active": "Activo",
+
+  "inactive": "Inactivo",
+  "blocked": "Bloqueado",
+  "rejected": "Rechazado",
+
+  "user": "Usuario",
+  "user_plural": "Usuarios",
+  "userWithCount": "{{count}} user",
+  "userWithCount_plural": "{{count}} user",
+
+  "administrator": "Administrador",
+
+  "administration": "Administración",
+
+  "specialist": "Especialista",
+
+  "forms": "Formularios",
+
+  "patient": "Paciente",
+  "patient_plural": "Pacientes",
+  "patientWithCount": "{{count}} patient",
+  "patientWithCount_plural": "{{count}} patient",
+
+  "logout": "Cerrar Sesión",
+
+  "help": "Ayuda",
+
+  "username_required": "Por favor introduzca su usuario.",
+
+  "password_required": "Por favor introduzca su contraseña.",
+
+  "labelValidationsRequired": "Este campo es requerido",
+
+  "previewHere": "Vista Previa",
+
+  "logout_confirmation": "¿Está seguro que desea salir del sistema?",
+
+  "name": "Nombre(s)",
+
+  "singularName": "Nombre",
+
+  "nameLastName": "Nombre(s) y Apellidos",
+
+  "registryNumber": "No. de registro",
+
+  "hospitalInstitution": "Institución de salud",
+
+  "action": "Acciones",
+
+  "accept": "Aceptar",
+
+  "add": "Añadir",
+
+  "new": "Nuevo",
+
+  "newFem": "Nueva",
+
+  "cancel": "Cancelar",
+
+  "newUser": "Nuevo usuario",
+
+  "newSpecialistUser": "Nuevo usuario Especialista",
+
+  "newAdministratorUser": "Nuevo usuario Administrador",
+
+  "registerNewUser": "Registrar nuevo usuario",
+
+  "completeData": "Completar datos del usuario",
+
+  "dataWillLost": "¡Se perderán los datos introducidos!",
+
+  "dataUserWillLost": "¡Se perderán los datos del Usuario que han sido introducidos!",
+
+  "lastName": "Apellido",
+
+  "lastNames": "Apellidos",
+
+  "speciality": "Especialidad",
+
+  "specialities": "Especialidades médicas",
+
+  "userName": "Nombre de usuario",
+
+  "confirmPassword": "Confirmar contraseña",
+
+  "registerNumberRequired": "El número de registro es requerido",
+
+  "medicalRegistryNumber": "No. de registro médico",
+
+  "onlyNumberCharacter": "Sólo se admiten caracteres numéricos (al menos 4 cifras)",
+
+  "onlyNameLastName": "Solo se admiten entre 1 y 50 caracteres (letras con  espacios, apóstrofos  y guiones intermedios)",
+
+  "nameLastnameRequired": "El {{context}} es requerido",
+
+  "specialityRequired": "La especialidad es requerida",
+
+  "hospitalRequired": "La institución hospitalaria es requerida",
+
+  "formRequired": "El tipo de evaluación es requerido",
+
+  "initialDateRequired": "La fecha de inicio es requerida",
+
+  "endDayRequired": "La fecha fin es requerida",
+
+  "onlySpecialityCharacter": "Solo se admiten entre 5 y 20 caracteres (letras con  espacios, apóstrofos  y guiones intermedios)",
+
+  "userRequired": "El usuario es requerido",
+
+  "userAdmitCharacter": "Solo se admiten hasta 32 caracteres (letras o números con un guión o punto intermedio)",
+
+  "passwordRequired": "La contraseña es requerida",
+
+  "passwordAdmitCharacter": "Solo se admiten entre 10 y 64 caracteres. (Debe incluir letras mayúsculas y minúsculas, números y caracteres especiales)",
+
+  "passwordMatch": "Las contraseñas no coinciden",
+
+  "addedUser": "Usuario añadido",
+
+  "addedUserSuccess": "El Usuario ha sido adicionado satisfactoriamente",
+
+  "registerUserSuccess": "El Usuario ha sido registrado satisfactoriamente. Espere un mensaje del Administrador informando sobre la activación de su cuenta",
+
+  "completeRegisterSuccess": "  El Usuario ha sido registrado satisfactoriamente",
+
+  "editedUserSuccess": "El Usuario ha sido modificado satisfactoriamente.",
+
+  "users": "Usuarios",
+
+  "createUser": "Crear usuario",
+
+  "changeIsActive": "¿Está seguro que desea modificar el estado del usuario seleccionado?",
+
+  "deleteUser": "¿Está seguro que desea eliminar el usuario?",
+
+  "statusActiveChanged": "El Estado ha sido modificado satisfactoriamente",
+
+  "emptyUserList": "No hay ningún usuario para mostrar",
+
+  "emptyPatientList": "No hay ningún paciente para mostrar",
+
+  "clinicHistoryNumber": "No. Historia Clínica",
+
+  "clinicHistoryNumberDetail": "No. de H. Clínica",
+
+  "patients": "Pacientes",
+
+  "serverComunicationEmpty": "No hay comunicación con el servidor",
+
+  "loadMore": "Cargar más",
+
+  "details": "Detalles",
+
+  "ageRequired": "La edad es requerida",
+
+  "ageOnlyNumberCharacter": "La edad debe ser un número entre 0 y 120.",
+
+  "birthDateRequired": "La fecha de nacimiento es requerida",
+
+  "heightWeightNumberCharacter": "Solo se admiten caracteres numéricos y caracter especial punto (.)",
+
+  "phoneNumberCharacter": "Por favor se necesita un teléfono. Solo se admiten caracteres numéricos",
+
+  "addressCharacter": "Solo se admiten entre 10 y 255 caracteres (letras y números con  espacios, apóstrofos, #, % y puntos intermedios)",
+
+  "addedPatient": "Paciente añadido",
+
+  "editedPatient": "Paciente editado",
+
+  "addPatient": "Adicionar paciente",
+
+  "addedPatientSuccess": "El Paciente ha sido adicionado satisfactoriamente",
+
+  "editedPatientSuccess": "El Paciente ha sido modificado satisfactoriamente",
+
+  "deletedUserSuccess": "El Usuario ha sido eliminado satisfactoriamente",
+
+  "dataPatientWillLost": "¡Se perderán los datos del Paciente que han sido introducidos!",
+
+  "dataBackWillLost": "¿Está seguro que desea salir de esta vista? Si decide continuar con esta acción se perderán los cambios realizados en el formulario",
+
+  "confirmEditPatient": "¿Está seguro que desea modificar los datos del paciente?",
+
+  "confirmEditUser": "¿Está seguro que desea modificar los datos del usuario?",
+
+  "pcrAlert": "Asegúrese que este es el valor del PCR del paciente",
+
+  "positive": "Positivo",
+
+  "negative": "Negativo",
+
+  "pcr": "PCR",
+
+  "address": "Dirección",
+
+  "municipality": "Municipio",
+
+  "province": "Provincia",
+
+  "phone": "Teléfono",
+
+  "height": "Estatura(cm)",
+
+  "heightWithOutMedit": "Estatura",
+
+  "weight": "Peso(lbs)",
+
+  "weightWithOutMedit": "Peso",
+
+  "femenine": "Femenino",
+
+  "masculine": "Masculino",
+
+  "gender": "Género",
+
+  "birthDate": "Fecha de nacimiento",
+
+  "age": "Edad",
+
+  "continue": "Continuar",
+
+  "save": "Guardar",
+
+  "contact": "Contacto",
+
+  "clinicData": "Datos clínicos",
+
+  "personalData": "Datos personales",
+
+  "expiredSession": "Su sesión ha expirado. Se cerrará automáticamente en {{seconds}} segundos.",
+  "form": {
+    "RXTORAX_AP": {
+      "title": "Radiografía de tórax anteroposterior (portátil)"
+    },
+    "RXTORAX_PII": {
+      "title": "Estratificación de riesgo"
+    },
+    "RXTORAX_PA": {
+      "title": "Radiografía de tórax posteroanterior (PA)"
+    },
+    "RXTORAX_TC": {
+      "title": "Tomografía computarizada (TC) de tórax simple"
+    }
+  },
+  "questions": {
+    "label": "Preguntas",
+    "hallazgos_frequentes_de_neumonia_sars_cov2": {
+      "title": "Hallazgos que sugieren neumonía por SARS-CoV2"
+    },
+    "hallazgos_de_neumonia_etilogia_diferente_sars_cov2": {
+      "title": "Hallazgos que sugieren neumonía de etiología diferente por SARS-CoV2"
+    },
+    "lesion_concomitante": {
+      "title": "Lesión concomitante"
+    },
+    "pronostico_de_ingreso_e_intubacion": {
+      "title": "Pronóstico de ingreso e intubación"
+    },
+    "hallazgos_tipicos_de_neumonia": {
+      "title": "Hallazgos típicos de neumonía por SARS-CoV2"
+    },
+    "hallazgos_atipicos_de_neumonia": {
+      "title": "Hallazgos atípicos de neumonía por SARS-CoV2"
+    },
+    "hallazgos_indeterminados_de_neumonia": {
+      "title": "Hallazgos indeterminados de neumonía por SARS-CoV2"
+    },
+    "apariencia_atípica": {
+      "title": "Apariencia atípica"
+    },
+    "entidades_concomitantes": {
+      "title": "Entidades concomitantes"
+    },
+    "estratificacion_de_la_gravedad": {
+      "title": "Estratificación de la gravedad"
+    }
+  },
+  "variables": {
+    "yes": "Si",
+    "no": "No",
+    "superior": "Superior",
+    "middle": "Medio",
+    "inferior": "Inferior",
+    "middle_superior": "Medio Superior",
+    "middle_inferior": "Medio Inferior",
+    "ligero": "Ligero",
+    "moderado": "Moderado",
+    "severo": "Severo",
+    "derecho": "Derecha",
+    "izquierdo": "Izquierda",
+    "right": "Derecho",
+    "left": "Izquierdo",
+    "bilateral": "Bilateral",
+    "present": "Presente",
+    "right_upper_lobe": "Lóbulo Superior Derecho",
+    "middle_lobe": "Lóbulo Medio",
+    "right_lower_lobe": "Lóbulo Inferior Derecho",
+    "upper_left_lobe": "Lóbulo Superior Izquierdo",
+    "left_lower_lobe": "Lóbulo Inferior Izquierdo",
+    "tenue_incremento_focal_densidad_distribucion_periferica": {
+      "title": "Tenue incremento focal de densidad (vidrio esmerilado) de distribución periférica"
+    },
+    "tenue_incremento_difuso_densidad_distribucion_periferica_y_central": {
+      "title": "Tenue incremento difuso de densidad (vidrio esmerilado) de distribución periférica y central (perihiliar)"
+    },
+    "infiltrado_acinar_de_aspecto_nodular": {
+      "title": "Infiltrado acinar de aspecto nodular"
+    },
+    "patron_reticular_que_compromete_el_intersticio_axial": {
+      "title": "Patrón reticular que compromete el intersticio axial"
+    },
+    "patron_reticular_que_compromete_el_intersticio_subpleural": {
+      "title": "Patrón reticular que compromete  el intersticio subpleural"
+    },
+    "asociacion_vidrio_esmerilado_y_areas_de_consolidacion": {
+      "title": "Asociación vidrio esmerilado y áreas de consolidación"
+    },
+    "asociacion_de_patron_acinar_y_reticular": {
+      "title": "Asociación de patrón acinar y reticular"
+    },
+    "consolidacion_alveolar": {
+      "title": "Consolidación alveolar"
+    },
+    "consolidacion_lobar_con_o_sin_broncograma": {
+      "title": "Consolidación lobar con o sin broncograma"
+    },
+    "consolidacion_alveolar_segmentaria_con_o_sin_broncograma": {
+      "title": "Consolidación alveolar segmentaria con o sin broncograma"
+    },
+    "patron_miliar": {
+      "title": "Patrón miliar"
+    },
+    "opacidades_en_sombra_o_masa_multifocales_bronconeumonia": {
+      "title": "Opacidades en sombra o masa multifocales (bronconeumonía)"
+    },
+    "nodulo_pulmonar": {
+      "title": "Nódulo pulmonar"
+    },
+    "masa_pulmonar": {
+      "title": "Masa pulmonar"
+    },
+    "cavidad_pulmonar": {
+      "title": "Cavidad pulmonar"
+    },
+    "derrame_pleural": {
+      "title": "Derrame pleural"
+    },
+    "lesion_con_probabilidad_de_cancer_de_pulmon": {
+      "title": "Lesión con probabilidad de cáncer de pulmón"
+    },
+    "hiperinsuflacion_pulmonar": {
+      "title": "Hiperinsuflación pulmonar"
+    },
+    "fibrosis_pulmonar": {
+      "title": "Fibrosis pulmonar"
+    },
+    "presencia_de_opacidades_en_vidrio_esmerilado_o_consolidaciones": {
+      "title": "Presencia de opacidades en vidrio esmerilado o consolidaciones"
+    },
+    "ensanchamiento_mediastinal_vascular": {
+      "title": "Ensanchamiento mediastinal vascular"
+    },
+    "ensanchamiento_mediastinal_tumoral": {
+      "title": "Ensanchamiento mediastinal tumoral"
+    },
+    "engrosamiento_hiliar_vascular": {
+      "title": "Engrosamiento hiliar vascular"
+    },
+    "engrosamiento_hiliar_tumoral": {
+      "title": "Engrosamiento hiliar tumoral"
+    },
+    "aumento_del_indice_cardio_toraxico": {
+      "title": "Aumento del índice cardiotorácico"
+    },
+
+    "opacidades_en_vidrio_esmerilado_distribucion_periferica": {
+      "title": "Opacidades en vidrio esmerilado de distribución periférica"
+    },
+    "opacidades_en_vidrio_deslustrado_multifocales_redondeadas": {
+      "title": "Opacidades en vidrio esmerilado multifocales, redondeadas"
+    },
+    "consolidacion_alveolar_asociada_con_opacidades_en_vidrio_deslustrado": {
+      "title": "Consolidación alveolar asociada con opacidades en vidrio esmerilado"
+    },
+    "patron_en_empedrado_asociada_con_opacidades_en_vidrio_deslustrado": {
+      "title": "Patrón en empedrado “pavimento loco”"
+    },
+    "neumonia_organizada": {
+      "title": "Neumonía organizada"
+    },
+    "signo_del_halo_invertido": {
+      "title": "Signo del halo inverso"
+    },
+    "opacidades_en_vidrio_esmerilado_distribucion_central": {
+      "title": "Opacidades en vidrio esmerilado de distribución central"
+    },
+    "opacidades_en_vidrio_esmerilado_consolidaciones": {
+      "title": "Opacidades en vidrio esmerilado con o sin consolidaciones no periféricas, no redondeadas"
+    },
+    "consolidacion_lobar_o_segmentaria_no_asociada_con_opacidad_en_vidrio_esmerilado": {
+      "title": "Consolidación lobar o segmentaria no asociada con opacidad en vidrio esmerilado"
+    },
+    "nodulos_centrolobulillar": {
+      "title": "Nódulos centrolobulillar"
+    },
+    "patron_de_arbol_en_brote": {
+      "title": "Patrón de árbol en brote"
+    },
+    "engrosamiento_de_septos_inter_e_intralobulillar": {
+      "title": "Engrosamiento de septos inter e intralobulillar"
+    },
+    "derrame_pleural_2": {
+      "title": "Derrame pleural"
+    },
+    "cavitacion_pulmonar": {
+      "title": "Cavidad pulmonar"
+    },
+    "enfisema_pulmonar": {
+      "title": "Enfisema pulmonar"
+    },
+    "derrame_pericardico": {
+      "title": "Derrame pericárdico"
+    },
+    "cardiomegalia": {
+      "title": "Cardiomegalia"
+    },
+    "adenopatias_mediastinales": {
+      "title": "Adenopatías mediastinales (> 10 mm)"
+    },
+    "adenopatias_hiliares": {
+      "title": "Adenopatías hiliares (> 10 mm)"
+    },
+    "tenue_incremento_de_la_densidad_pulmonar": {
+      "title": "Tenue incremento de la densidad pulmonar (vidrio esmerilado)"
+    },
+    "marcado_incremento_de_la_densidad_pulmonar": {
+      "title": "Marcado incremento de la densidad pulmonar (consolidación)"
+    },
+    "patron_reticular": {
+      "title": "Patrón reticular"
+    },
+    "asociacion_vidrio_esmerilado_y_consolidacion": {
+      "title": "Asociación de vidrio esmerilado y consolidación"
+    },
+    "asociacion_consolidacion_patron_reticular": {
+      "title": "Asociación de consolidación y patrón reticular"
+    },
+    "afectacion_pulmonar_superior": {
+      "title": "Superior"
+    },
+    "afectacion_pulmonar_middle": {
+      "title": "Medio"
+    },
+    "afectacion_pulmonar_inferior": {
+      "title": "Inferior"
+    }
+  },
+  "summary": {
+    "conclusions": "Conclusiones",
+    "afectPulmonar": "Afectación Pulmonar",
+    "score": "Puntaje",
+    "generate_report": "Generar Informe",
+    "observations": "Otros hallazgos y observaciones",
+    "recomendations": "Recomendaciones",
+    "tc_torax_normal": {
+      "title": "TC Tórax Normal"
+    },
+    "afectacion_del_parenquima_pulmonar_sugestivo_de_neumonia_viral": {
+      "title": "Afectación del parénquima pulmonar sugestivo de neumonia viral"
+    },
+    "afectacion_del_parenquima_pulmonar_sugestivo_de_neumonia_no_viral": {
+      "title": "Afectación del parénquima pulmonar sugestivo de neumonia no viral"
+    },
+    "presencia_de_edema_pulmonar": {
+      "title": "TC Tórax Normal",
+      "normal": "Normal (0)",
+      "light": "Leve (1-2)",
+      "moderate": "Moderada (3-6)",
+      "severe": "Severa (7-8)"
+    },
+    "graduacion_radiologica_de_la_afectacion_pulmonar": {
+      "title": "Índice de afectación pulmonar (áreas pulmonares afectadas)",
+      "normal": "Normal (0)",
+      "light": "Leve (1-2)",
+      "moderate": "Moderada (3-6)",
+      "severe": "Severa (7-8)"
+    },
+    "indice_afectacion_pulmonar": {
+      "title": "Índice de afectación pulmonar",
+      "normal": "Normal (0)",
+      "light": "Leve (1-4)",
+      "moderate": "Moderada (5-8)",
+      "severe": "Severa (9-12)"
+    },
+    "radiografia_de_torax_normal": {
+      "title": "Radiografía de tórax normal"
+    },
+    "tc_de_torax_normal": {
+      "title": "TC de tórax normal"
+    },
+    "afectacion_del_parenquima_pulmonar_sugestivo_de_neumonia_por_sars_cov2": {
+      "title": "Afectación del parénquima pulmonar sugestivo de neumonía por SARS – CoV2"
+    },
+    "afectacion_del_parenquima_pulmonar_sugestivo_de_neumonia_de_etiologia_diferente_a_sars_cov2": {
+      "title": "Afectación del parénquima pulmonar sugestivo de neumonía de etiología diferente a SARS – CoV2"
+    },
+    "lesion_concomitante": {
+      "title": "Lesión concomitante"
+    },
+    "hallazgos_tipicos_compatibles_con_neumonia": {
+      "title": "Hallazgos típicos y compatibles con neumonía por SARS-CoV 2"
+    },
+    "hallazgos_pueden_observarse_con_neumonia": {
+      "title": "Hallazgos que pueden observarse en neumonía por SARS-CoV 2"
+    },
+    "hallazgos_atipicos_no_sugestivos_para_neumonia": {
+      "title": "Hallazgos atípicos, no sugestivos para neumonía por SARS-CoV 2"
+    }
+  },
+  "pulmonarField": "Campo pulmonar",
+  "clinicHistory": "Historia Clínica",
+
+  "evaluation": "Evaluación",
+  "evaluation_plural": "Evaluaciones",
+  "evaluationWithCount": "{{count}} evaluation",
+  "evaluationWithCount_plural": "{{count}} evaluation",
+
+  "dashboard": "Dashboard",
+
+  "actions": "Acciones",
+
+  "saveQuestionnarie": "El Informe creado ha sido guardado satisfactoriamente",
+
+  "failSaveQuestionnarie": "El Informe no se pudo generar inténtelo nuevamente",
+
+  "ask_go_out": "¿Está seguro que desea salir de esta vista?",
+
+  "no_evaluations": "No hay evaluaciones que mostrar",
+
+  "emitConclution": "Emitir conclusiones",
+
+  "selectPatient": "Seleccionar paciente",
+
+  "back": "Anterior",
+
+  "next": "Siguiente",
+
+  "newPatient": "Nuevo paciente",
+
+  "editPatient": "Editar paciente",
+
+  "patientData": "Datos del paciente",
+
+  "state": "Estado",
+
+  "options": "Opciones",
+
+  "userData": "Datos del usuario",
+
+  "profile": "Perfil",
+
+  "userdetails": "Detalles del usuario",
+
+  "uploadImage": "Subir imagen",
+
+  "summaryQuestions": "Preguntas",
+
+  "radiografiaDeficiente": "Radiografía deficiente para diagnóstico",
+
+  "rxNoUtil": "¿Está seguro de emitir informe para una imagen RX no útil?",
+
+  "setAfectPulm": "Defina la afectación en cada área pulmonar",
+
+  "viewProfile": "Ver perfil",
+
+  "reset": "Reiniciar",
+
+  "deleteSpecialty": "¿Está seguro que desea eliminar la especialidad médica seleccionada?",
+
+  "emptySpecialtyList": "No hay ninguna especialidad médica para mostrar",
+  "addSpecialty": "Nueva especialidad médica",
+  "editSpecialty": "Datos de la especialidad médica",
+  "addInstitution": "Nueva institución de salud",
+  "specialtyName": "Nombre",
+  "editInstitution": "Institución de salud",
+  "medicalInstitutions": "Instituciones de salud",
+  "institution": "Institución",
+  "deleteInstitution": "¿Está seguro que desea eliminar la Institución de salud  seleccionada?",
+  "emptyInstitutionList": "No hay ninguna institución de salud para mostrar.",
+  "institutionName": "Nombre de la institución",
+  "code": "Código",
+  "seudoName": "Seudónimo",
+  "type": "Tipo",
+  "nameRequired": "El nombre es requerido",
+  "typeRequired": "El tipo es requerido",
+  "codeRequired": "El código es requerido",
+  "nameValidationMsg": "Se admiten entre 1 y 50 letras y números, los caracteres especiales (-), (‘) y el (.) seguido de un espacio y letras.",
+  "codeValidationMsg": "Se admiten 3 ó 4 letras mayúsculas, el último caracter puede ser número.",
+  "nicknameRequired": "El seudónimo es requerido",
+  "nicknameValidationMsg": "Solo se admiten letras entre 1 y 50.",
+  "phoneValidationMsg": "Por favor se necesita un teléfono. Solo se admite teléfono con formato válido (########) ó (+53########).",
+  "addressValidationMsg": "Se admiten entre 10 y 255 caracteres.",
+  "provinceRequired": "La provincia es requerida",
+  "municipalityRequired": "El municipio es requerido",
+  "confirmEditSpecialty": "¿Está seguro que desea modificar el nombre de la especialidad médica?",
+  "addedSpecialtySuccess": "La Especialidad médica ha sido adicionada satisfactoriamente",
+  "editedSpecialtySuccess": "La Especialidad médica ha sido modificada satisfactoriamente.",
+  "dataSpecialtyWillLost": "!Se perderán los  datos de la especialidad médica que han sido introducidos!",
+  "deletedSuccess": "La Especialidad médica ha sido eliminada satisfactoriamente.",
+  "onlySpecialtyInstitution": "Solo se admiten letras entre 1 y 250.",
+
+  "forgotPasswordInfo": "Por favor provea una dirección a la cual enviarle un enlace para recuperar su contraseña. Este enlace expirará en 24 horas. De no recibir el correo inténtelo nuevamente.",
+
+  "forgotAccount": "Recuperar Cuenta",
+
+  "userRegister": "Registrar usuario",
+
+  "email": "Correo electrónico",
+
+  "emailNoValid": "Solo se admiten correos con formato válido (usuario@dominio.ext).",
+
+  "emailSentSuccess": "Su solicitud ha sido enviada. Por favor, revise su correo",
+
+  "indiceAfectacionPulomnar": "Índice de afectación pulmonar",
+  "deletedInstitutionSuccess": "La Institución de salud ha sido eliminada satisfactoriamente.",
+  "addedInstitutionSuccess": "La Institución de salud ha sido adicionada satisfactoriamente",
+  "editedInstitutionSuccess": "La Institución de salud ha sido modificada satisfactoriamente.",
+  "confirmEditInstitution": "¿Está seguro que desea modificar los datos de la Institución de salud?",
+  "dataInstitutionWillLost": "¡Se perderán los datos de la Institución de salud que han sido introducidos!",
+
+  "restorePassword": "Restaurar contraseña",
+
+  "presentation": "Presentación",
+  "presentationRequired": "La presentación es requerida",
+
+  "resetPasswordSuccess": "La contraseña ha sido modificada satisfactoriamente",
+
+  "studyData": "Datos del estudio",
+
+  "date": "Fecha",
+
+  "dateRequired": "La fecha es requerida",
+
+  "Rx": "Rx",
+
+  "TC": "TC",
+
+  "existing": "Existente",
+
+  "evaluationDate": "Fecha de evaluación",
+
+  "rxtcDate": "Fecha de {{type}}",
+
+  "authCode": "Código de autenticación",
+
+  "authCodeInfo": "Por favor provea el código que le ha sido enviado a la dirección de correo que tiene registrada en el sistema",
+
+  "verify": "Verificar",
+
+  "onlyFourDigits": "Debe ser un número de cuatro cifras",
+  "rols": "Roles",
+  "role": "Rol",
+  "emailRequired": "El correo electrónico es requerido",
+  "emailValidationMsg": "Solo se admiten correos con formato válido (usuario@subdominio.dominio) ó (usuario@subdominio.subdominio.dominio).",
+  "usernameRequired": "El nombre de usuario es requerido",
+  "usernameValidationMsg": "Solo se admiten hasta 32 caracteres (letras o números con un guión o punto intermedio).",
+  "laboralData": "Datos laborales",
+  "accessData": "Datos de acceso",
+  "configRoles": "Configurar roles",
+
+  "configRole": "Configurar rol",
+
+  "selectRole": "Seleccionar rol",
+
+  "confirmEditRole": "¿Está seguro que desea modificar los datos del rol del usuario?",
+
+  "dataRoleWillBeLost": "Se perderán los datos del rol que han sido introducidos",
+
+  "deleteRoleMsg": "¿Está seguro que desea eliminar el rol al usuario?",
+
+  "deleteRole": "Eliminar rol",
+  "hospital": "Hospital",
+  "clinic": "Policlínico",
+  "insolationCenter": "Centro de aislamiento",
+  "fieldHospital": "Hospital de campaña",
+  "updatedRolSuccess": "El Rol ha sido modificado satisfactoriamente",
+
+  "traces": "Trazas",
+
+  "trace": {
+    "element": "Elemento",
+    "actions": "Acciones",
+    "all": "Todos",
+    "evaluation": "Evaluación",
+    "patient": "Paciente",
+    "user": "Usuario",
+    "specialty": "Especialidad",
+    "hospitalInstitution": "Institución de Salud",
+    "create": "Crear",
+    "update": "Actualizar",
+    "delete": "Eliminar",
+    "permanentlyDelete": "Eliminar permanentemente",
+    "created": "creó",
+    "deleted": "eliminó",
+    "permanentlyDeleted": "eliminó permanentemente",
+    "updated": "actualizó",
+
+    "details": {
+      "oldValue": "Valor anterior",
+      "newValue": "Valor actual",
+      "deletedItemM": "Actualmente no existe el {{element}} en el sistema",
+      "deletedItemF": "Actualmente no existe la {{element}} en el sistema",
+      "forms": {
+        "RxTorax-TC": "TC de tórax",
+        "RxTorax-PA": "Rx PA",
+        "RxTorax-PII": "Estratificación",
+        "RxTorax-AP": "Rx Portátil"
+      },
+      "header": {
+        "messageM": "Datos del {{element}}",
+        "actualizarM": "modificado",
+        "eliminarM": "eliminado",
+        "crearM": "creado",
+
+        "messageF": "Datos de la {{element}}",
+        "actualizarF": "modificada",
+        "eliminarF": "eliminada",
+        "crearF": "creada"
+      },
+      "USER_TYPE": {
+        "first_name": "Nombre(s)",
+        "last_name": "Apellidos",
+        "hospital_desc": "Institución de salud",
+        "username": "Nombre de usuario",
+        "state": "Estado",
+        "email": "Correo electrónico",
+        "role_desc": "Rol",
+        "presentation_desc": "Presentación",
+        "specialty_desc": "Especialidad",
+        "medical_record_number": "No. de registro"
+      },
+      "ROLE_TYPE": {
+        "user_desc": "Usuario",
+        "role_desc": "Rol"
+      },
+      "SPECIALTY_TYPE": {
+        "name": "Nombre de la Especialidad"
+      },
+      "HOSPITAL_INSTITUTION_TYPE": {
+        "name": "Nombre de la Institución",
+        "province_desc": "Provincia",
+        "municipality_desc": "Municipio",
+        "type": "Tipo",
+        "CLINIC": "Policlínico",
+        "HOSPITAL": "Hospital",
+        "ISOLATION_CENTER": "Centro de aislamiento",
+        "FIELD_HOSPITAL": "Hospital de campaña",
+        "address": "Dirección",
+        "phone": "Teléfono",
+        "nickname": "Seudónimo"
+      },
+      "PATIENT_TYPE": {
+        "name": "Nombre(s) y Apellidos",
+        "age": "Edad",
+        "sex": "Sexo",
+        "pcr": "PCR",
+        "birth_date": "Fecha de nacimiento",
+        "height": "Estatura(cm)",
+        "weight": "Peso(lbs)",
+        "phone": "Teléfono",
+        "address": "Dirección",
+        "municipality_desc": "Municipio",
+        "province_desc": "Provincia",
+        "hospital_desc": "Institución de salud"
+      },
+      "EVALUATION_TYPE": {
+        "questionnaire_type": "Tipo de formulario",
+        "patient_desc": "Nombre y Apellidos del paciente",
+        "hospital_desc": "Institución de salud",
+        "patient_image_desc": "Fecha de {{eval}}",
+        "study_identification": "ID del Estudio"
+      }
+    }
+  },
+
+  "from": "Desde",
+
+  "to": "Hasta",
+
+  "apply": "Aplicar",
+
+  "clear": "Limpiar",
+
+  "export": "Exportar",
+
+  "pdfFormat": "Formato pdf",
+
+  "xlsxFormat": "Formato xlsx",
+
+  "emptyTraceList": "No hay ninguna acción para mostrar.",
+
+  "emptyReportMsg": "No hay ningún resultado para mostrar.",
+
+  "nameAndLastName": "Nombre y Apellidos",
+
+  "ipAddress": "Dirección IP",
+
+  "totalMakedEvaluations": "Evaluaciones realizadas",
+
+  "totalAddedPatients": "Pacientes adicionados",
+
+  "totalVariables": "Total de variables e indicadores",
+
+  "variablesIndicatorsCovid": "Variables e indicadores sugestivos o no de COVID 19",
+
+  "evaluationsByForm": "Evaluaciones por formulario",
+
+  "exportEvaluationsByForm": "Exportar evaluaciones por formulario",
+
+  "reports": "Reportes",
+
+  "exportEvalsExcel": "Exportar evaluaciones a fichero Excel",
+
+  "reportForm": "Formulario",
+
+  "selectForm": "Seleccione el formulario",
+
+  "selectCriteriaMsg": "Debe seleccionar los criterios de búsqueda requeridos para obtener la información",
+
+  "loadingReport": "Cargando reporte",
+
+  "concurrenceMsg": "La acción que está intentando realizar no es posible ejecutarla porque el elemento no se encuentra disponible.",
+
+  "newForm": "Nuevo formulario",
+
+  "eval": "Evaluar",
+
+  "advancedSearch": "Búsqueda avanzada",
+
+  "dataSearchWillBeLost": "¡Se perderán los datos para la búsqueda que han sido introducidos!",
+
+  "notConnected": "Se presentaron problemas en la persistencia de los datos. Por favor inténtelo nuevamente en unos minutos. Si el problema se mantiene, cierre el sistema y contacte al Administrador.",
+
+  "noData": "No hay datos",
+
+  "selectProvince": "Seleccione una provincia",
+
+  "operationDetails": "Detalles de la operación",
+
+  "userTraceActionM": "{{fullName}} {{action}} un <bold>{{element}}</bold> con los siguientes valores el <bold>{{date}}</bold> a las <bold>{{time}}</bold> hrs.",
+  "userTraceActionF": "{{fullName}} {{action}} una <bold>{{element}}</bold> con los siguientes valores el <bold>{{date}}</bold> a las <bold>{{time}}</bold> hrs.",
+
+  "close": "Cerrar",
+
+  "systemAltLogo": "Logo del sistema",
+
+  "opened": "Abierto",
+
+  "closed": "Cerrado",
+
+  "pageSizeChanger": "Cambiador de tamaño de página",
+
+  "changePassword": "Cambiar contraseña",
+
+  "currentPassword": "Contraseña actual",
+
+  "newPassword": "Nueva Contraseña",
+
+  "passwordCantMatch": "No puede coincidir con la contraseña actual.",
+
+  "changePasswordSuccess": "La contraseña ha sido cambiada satisfactoriamente",
+
+  "notNameUserNamePassword": "No puede contener su Nombre y Apellidos, Nombre de usuario, Usuario de correo o No. de registro.",
+
+  "userChanged": "Usted ha modificado su nombre de usuario. Su sesión se debe cerrar para utilizar las nuevas credenciales.",
+
+  "formImage": "Imagen de formulario",
+
+  "editProfile": "Editar perfil",
+
+  "userNotRecordNumber": "No puede coincidir con el No. de registro",
+
+  "showDeletedUsers": "Ver Usuarios eliminados",
+
+  "showUsers": "Ver Usuarios",
+
+  "deleted": "Eliminado",
+
+  "deletedUsers": "Usuarios eliminados",
+
+  "restoreDeleted": "¿Está seguro que desea activar el usuario seleccionado?",
+
+  "successActivatedUser": "El usuario ha sido activado satisfactoriamente"
+}

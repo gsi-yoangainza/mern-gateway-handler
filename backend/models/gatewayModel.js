@@ -8,12 +8,16 @@ const gatewaySchema = mongoose.Schema(
       require: true,
       ref: "User",
     },
+    serialNumber: {
+      type: String,
+      required: [true, "Serial number is required"],
+    },
     name: {
       type: String,
-      required: [true, "Please add a name!!!"],
+      required: [true, "Please add a name"],
     },
     ipv4Address: {
-      type: Number,
+      type: String,
     },
     peripheralDevices: [Peripheral.schema],
   },

@@ -1,0 +1,51 @@
+{
+  "password": "Password",
+
+  "submit": "Submit",
+
+  "users": "Users",
+
+  "apply": "Apply",
+
+  "clear": "Clear",
+
+  "noData": "No data",
+
+  "close": "Close",
+
+  "opened": "Opened",
+
+  "closed": "Closed",
+
+  "accept": "Accept",
+
+  "editProfile": "Editar perfil",
+
+  "deleted": "Deleted",
+
+  "deletedUser": "Deleted user",
+
+  "dataWillBeLost": "Data will be lost!",
+
+  "creationDate": "Creation Date",
+
+  "gateways": "Gateways",
+
+  "peripherals": "Peripherals",
+
+  "gateway": {
+    "addGateway": "Add Gateway",
+    "serialNumber": "Serial number",
+    "name": "Name",
+    "ipv4Address": "IPv4 Address",
+    "peripherals": "Peripherals",
+    "ipv4AddressValidation": "Invalid IPv4 Address provided"
+  },
+  "peripheral": {
+    "addPeripheral": "Add Peripheral",
+    "vendor": "Vendor",
+    "status": "Status",
+    "online": "Online",
+    "offline": "Offline"
+  }
+}

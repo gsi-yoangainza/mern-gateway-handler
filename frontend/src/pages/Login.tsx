@@ -1,4 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+import { login, reset } from '../modules/users/store/authSlice';
+import Spinner from '../modules/common/components/Spinner';
+import { IUser } from './Register';
 
 export interface ILoginForm {
   email: string;
@@ -11,7 +18,22 @@ const Login: React.FC = () => {
     password: '',
   });
 
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+
+  const { user, isLoading, isError, isSuccess, message } = useAppSelector((state) => state.auth);
+
   const { email, password } = formData;
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message);
+    }
+    if (isSuccess || JSON.stringify(user) !== '{}') {
+      navigate('/dashboard');
+    }
+    dispatch(reset());
+  }, [user, isError, isSuccess, message, navigate, dispatch]);
 
   const onChange = (e: any) => {
     setFormData((prevState) => ({
@@ -21,12 +43,19 @@ const Login: React.FC = () => {
   };
   const onSubmit = (e: any) => {
     e.preventDefault();
+
+    const userData: Pick<IUser, 'email' | 'password'> = {
+      email,
+      password,
+    };
+    dispatch(login(userData));
   };
+  if (isLoading) return <Spinner />;
   return (
     <>
       <section className="heading">
-        <h1>Register</h1>
-        <p>Please create an account</p>
+        <h1>Login</h1>
+        <p>Please login</p>
       </section>
       <section className="form">
         <form onSubmit={onSubmit}>

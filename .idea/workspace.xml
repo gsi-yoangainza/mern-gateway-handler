@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b9b9612-01d2-430e-8c7b-9a9f66c6bd66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/controllers/gatewayController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/gatewayController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/gatewayModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/gatewayModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/counter/Counter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/counter/Counter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/counter/counterAPI.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/counter/counterSlice.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/features/counter/counterSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/modules/common/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/modules/common/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/app/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/modules/common/components/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/pages/Dashboard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/pages/Login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/pages/Register.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend3/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2MaA7rUiL6Rx65Nq3BsHyiRmzfq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="E:\Trabajo\Projects\dev\gateways\frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b9b9612-01d2-430e-8c7b-9a9f66c6bd66" name="Default Changelist" comment="" />
+      <created>1677995154853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677995154853</updated>
+      <workItem from="1677995157169" duration="676000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

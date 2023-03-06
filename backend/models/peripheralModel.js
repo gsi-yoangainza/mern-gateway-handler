@@ -2,9 +2,17 @@ const mongoose = require("mongoose");
 
 const peripheralSchema = mongoose.Schema(
   {
-    vendor: String,
-    ipv4Address: {
-      type: Number,
+    gateway: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Gateway",
+    },
+    uuid: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    vendor: {
+      type: String,
       required: true,
     },
     status: Boolean,
