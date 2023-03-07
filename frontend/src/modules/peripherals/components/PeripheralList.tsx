@@ -1,16 +1,39 @@
-import { Table } from 'antd';
 import React, { useEffect } from 'react';
-import { toast } from 'react-toastify';
+import { Table, Tag } from 'antd';
+import { ColumnsType } from 'antd/es/table';
+
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { intl } from '../../../core/helpers/i18nHelper';
+import { getAll, setOpen } from '../store/peripheralSlice';
+import { IPeripheral } from '../types/peripherals';
+import { openNotification } from '../../common/utils/utils';
+import GatewayForm from './peripheralForm/PeripheralForm';
 import Actions from '../../common/components/crudNav/Actions';
 import Spinner from '../../common/components/Spinner';
-import { getAll, setOpen } from '../store/peripheralSlice';
-import { columns, openNotification } from '../utils/utils';
-import GatewayForm from './peripheralForm/PeripheralForm';
 
 const PeripheralList: React.FC = () => {
   const dispatch = useAppDispatch();
+
+  const columns: ColumnsType<IPeripheral> = [
+    { title: intl('peripheral.vendor'), dataIndex: 'vendor', key: 'vendor' },
+    { title: intl('creationDate'), dataIndex: 'createdAt', key: 'creationDate' },
+    {
+      title: intl('peripheral.status'),
+      dataIndex: 'status',
+      key: 'status',
+      render: (value) => intl(`peripheral.${value ? 'online' : 'offline'}`),
+    },
+    {
+      title: intl('peripheral.status'),
+      key: 'status',
+      dataIndex: 'status',
+      render: (_, { status }) => (
+        <Tag color={`${status ? '#43c574' : '#ED495C'}`} key={'1'}>
+          {intl(`peripheral.${status ? 'online' : 'offline'}`).toUpperCase()}
+        </Tag>
+      ),
+    },
+  ];
 
   useEffect(() => {
     dispatch(getAll());

@@ -44,6 +44,10 @@ const GlobalStyles = createGlobalStyle`
     background: #fff;
   }
 
+  .antag, .ant-tag-has-color {
+    height: 22px;
+  }
+
   .ant-image-preview-operations {
     line-height: 41px !important;
     background: rgba(0, 0, 0, 0.5) !important;

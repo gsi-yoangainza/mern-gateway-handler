@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const asyncHandler = require("express-async-handler");
 const Peripheral = require("../models/peripheralModel");
 
@@ -15,8 +16,8 @@ const getPeripheral = asyncHandler(async (req, res) => {
 //@route    POST /api/peripheral
 //@access   Private
 const setPeripheral = asyncHandler(async (req, res) => {
-  const uuId = crypto.randomUUID();
-  const peripheral = await Peripheral.create({ ...req.body, uuId });
+  const uuid = crypto.randomUUID();
+  const peripheral = await Peripheral.create({ ...req.body, uuid });
 
   res.status(200).json(peripheral);
 });

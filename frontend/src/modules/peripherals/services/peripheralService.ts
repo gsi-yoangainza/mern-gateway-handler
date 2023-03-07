@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { IPeripheral } from '../types/peripherals';
 
 const API_URL = '/api/peripherals/';

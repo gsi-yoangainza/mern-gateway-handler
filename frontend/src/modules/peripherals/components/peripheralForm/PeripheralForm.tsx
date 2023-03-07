@@ -1,14 +1,14 @@
-import React, { createRef, useState } from 'react';
+import React, { createRef } from 'react';
+import { Button, Form, Input, Switch, Typography } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+
 import { useAppSelector, useAppDispatch } from '../../../../app/hooks';
 import { createPeripheral } from '../../store/peripheralSlice';
-import { Button, Form, Input, notification, Switch, Typography } from 'antd';
 import { StyledDrawer } from '../styled';
 import { theme } from '../../../../core/theme/theme';
-import { ExclamationCircleOutlined } from '@ant-design/icons';
-import { onConfirm } from '../../utils/utils';
 import { intl } from '../../../../core/helpers/i18nHelper';
-import { validateIPv4Address } from '../../../../core/utils/validations';
 import { ContainerForm, DrawerFooterActions, FormSpin } from '../../../common/styled';
+import { onConfirm } from '../../../common/utils/utils';
 
 interface IProps {
   onClose: () => void;
@@ -36,15 +36,7 @@ const PeripheralForm: React.FC<IProps> = ({ onClose }: IProps) => {
   };
 
   return (
-    <Form
-      name="add-user"
-      onFinish={onSubmit}
-      layout="vertical"
-      form={form}
-      ref={formRef}
-      // initialValues={initVals}
-      scrollToFirstError
-    >
+    <Form name="add-peripheralr" onFinish={onSubmit} layout="vertical" form={form} ref={formRef} scrollToFirstError>
       <StyledDrawer
         title={
           <Text style={{ color: theme.colors.primary, fontWeight: 'bold', fontSize: 17 }}>

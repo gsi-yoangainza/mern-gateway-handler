@@ -1,40 +1,56 @@
 import React, { createRef, useState } from 'react';
-import { useAppSelector, useAppDispatch } from '../../../../app/hooks';
-import { createGateway } from '../../store/gatewaySlice';
 import { Button, Form, Input, Typography } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+import { isEmpty } from 'lodash';
+
+import { useAppSelector, useAppDispatch } from '../../../../app/hooks';
+import { createGateway, editGateway } from '../../store/gatewaySlice';
 import { StyledDrawer } from '../styled';
 import { theme } from '../../../../core/theme/theme';
-import { ExclamationCircleOutlined } from '@ant-design/icons';
-import { onConfirm } from '../../utils/utils';
+import { filterArrayPeripherals } from '../../utils';
 import { intl } from '../../../../core/helpers/i18nHelper';
-import PeripheralsTransfer from './GatewayPeripheralsTransfer';
-import { validateIPv4Address } from '../../../../core/utils/validations';
+import { validateFieldName, validateIPv4Address } from '../../../../core/utils/validations';
 import { ContainerForm, DrawerFooterActions, FormSpin } from '../../../common/styled';
-import { IPeripheralResponse } from '../../../peripherals/types/peripherals';
+import { IGatewayResponse } from '../../types/gateway';
+import { onConfirm, openNotification } from '../../../common/utils/utils';
+import PeripheralsTransfer from './GatewayPeripheralsTransfer';
 
 interface IProps {
   onClose: () => void;
+  selectedGateway?: IGatewayResponse;
 }
-const GatewayForm: React.FC<IProps> = ({ onClose }: IProps) => {
+
+const GatewayForm: React.FC<IProps> = ({ onClose, selectedGateway }: IProps) => {
   const dispatch = useAppDispatch();
-  const { isFormLoading, isOpen } = useAppSelector((state) => state.gateway);
+  const { isFormLoading, isOpen, isError, isOpenEdit } = useAppSelector((state) => state.gateway);
   const { peripherals } = useAppSelector((state) => state.peripheral);
+
   const [selectedPeripherals, setSelectedPeripherals] = useState<string[]>([]);
+  const [peripheralTransferStatus, setStatus] = useState<'error' | 'warning'>();
+
   const formRef = createRef<any>();
   const [form] = Form.useForm();
   const { Text } = Typography;
 
   const onSubmit = (e: any) => {
-    // eslint-disable-next-line no-debugger
-    debugger;
-    if (selectedPeripherals) {
-      let items: IPeripheralResponse[] = [];
-      selectedPeripherals.forEach((e) => {
-        items = peripherals.filter((element) => element._id.toString() === e);
-      });
-      dispatch(createGateway({ ...e, peripheralDevices: items || [] }));
+    if (peripheralTransferStatus !== 'error') {
+      if (selectedPeripherals.length > 0) {
+        const items = filterArrayPeripherals(selectedPeripherals, peripherals);
+        if (isOpenEdit) {
+          dispatch(editGateway({ id: selectedGateway?._id || '', data: { ...e, peripheralDevices: items || [] } }));
+        } else {
+          dispatch(createGateway({ ...e, peripheralDevices: items || [] }));
+        }
+      } else {
+        if (isOpenEdit) {
+          dispatch(editGateway({ id: selectedGateway?._id || '', data: e }));
+        } else {
+          dispatch(createGateway(e));
+        }
+      }
+      !isError && form.resetFields();
     } else {
-      dispatch(createGateway({ ...e, peripheralDevices: selectedPeripherals || [] }));
+      openNotification('error', intl('gateway.peripheralAmountValidation'));
     }
   };
 
@@ -48,26 +64,39 @@ const GatewayForm: React.FC<IProps> = ({ onClose }: IProps) => {
       <ExclamationCircleOutlined />
     );
   };
-  console.log('selectedPeripherals', selectedPeripherals);
+
+  const handleStatus = (st: 'error' | 'warning') => {
+    if (st === 'error') {
+      openNotification('error', intl('gateway.peripheralAmountValidation'));
+    }
+    setStatus(st);
+  };
+
+  const initValues = {
+    name: selectedGateway?.name,
+    serialNumber: selectedGateway?.serialNumber,
+    ipv4Address: selectedGateway?.ipv4Address,
+  };
+
   return (
     <Form
-      name="add-user"
+      name="add-gateway"
       onFinish={onSubmit}
       layout="vertical"
       form={form}
       ref={formRef}
-      // initialValues={initVals}
+      initialValues={initValues}
       scrollToFirstError
     >
       <StyledDrawer
         title={
           <Text style={{ color: theme.colors.primary, fontWeight: 'bold', fontSize: 17 }}>
-            {intl('gateway.addGateway')}
+            {intl(!isOpenEdit ? 'gateway.addGateway' : 'gateway.editGateway')}
           </Text>
         }
         placement="right"
         closable={false}
-        open={isOpen}
+        open={isOpen || (isOpenEdit && !isEmpty(selectedGateway))}
         destroyOnClose
         onClose={handleCancel}
         width={window.screen.width > 768 ? 500 : '100%'}
@@ -93,7 +122,17 @@ const GatewayForm: React.FC<IProps> = ({ onClose }: IProps) => {
           <Form.Item required label={intl('gateway.serialNumber')} name="serialNumber" rules={[{ required: true }]}>
             <Input />
           </Form.Item>
-          <Form.Item required label={intl('gateway.name')} name="name" rules={[{ required: true }]}>
+          <Form.Item
+            required
+            label={intl('gateway.name')}
+            name="name"
+            rules={[
+              { required: true },
+              {
+                validator: (rule, value) => validateFieldName(rule, value),
+              },
+            ]}
+          >
             <Input />
           </Form.Item>
           <Form.Item
@@ -110,7 +149,12 @@ const GatewayForm: React.FC<IProps> = ({ onClose }: IProps) => {
             <Input />
           </Form.Item>
           <Form.Item label={intl('gateway.peripherals')} name="peripheralDevices">
-            <PeripheralsTransfer setSelected={setSelectedPeripherals} />
+            <PeripheralsTransfer
+              setSelected={setSelectedPeripherals}
+              gatewayPeripherals={selectedGateway?.peripheralDevices || []}
+              status={peripheralTransferStatus}
+              setStatus={handleStatus}
+            />
           </Form.Item>
         </ContainerForm>
       </StyledDrawer>

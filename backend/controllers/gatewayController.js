@@ -25,7 +25,11 @@ const setGateway = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("Serial number already exists");
   }
-  const gateway = await Gateway.create({ ...req.body, user: req.user.id });
+
+  const gateway = await Gateway.create({
+    ...req.body,
+    user: req.user.id,
+  });
 
   res.status(200).json(gateway);
 });

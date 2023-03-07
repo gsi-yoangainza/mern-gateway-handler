@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { IGateway } from '../types/gateway';
+import { IGateway, IGatewayEditData } from '../types/gateway';
 
 const API_URL = '/api/gateways/';
 
@@ -28,9 +28,35 @@ const createGateway = async (gatewayData: IGateway, token: string) => {
   }
 };
 
+const editGateway = async (data: IGatewayEditData, token: string) => {
+  const response = await axios.put(API_URL + data.id, data.data, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (response.data) {
+    return response.data;
+  }
+};
+
+const deleteGateway = async (id: string, token: string) => {
+  const response = await axios.delete(API_URL + id, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (response.data) {
+    return response.data;
+  }
+};
+
 const gatewayService = {
   getAll,
   createGateway,
+  editGateway,
+  deleteGateway,
 };
 
 export default gatewayService;

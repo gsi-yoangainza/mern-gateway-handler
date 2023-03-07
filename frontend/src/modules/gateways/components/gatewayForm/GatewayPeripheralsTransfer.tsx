@@ -1,65 +1,69 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Transfer } from 'antd';
 import type { TransferDirection } from 'antd/es/transfer';
+
 import { useAppSelector, useAppDispatch } from '../../../../app/hooks';
 import { getAll as getPeripherals } from '../../../peripherals/store/peripheralSlice';
-
-interface RecordType {
-  key: string;
-  title: string;
-  description: string;
-}
+import { RecordType } from '../../types/gateway';
+import { dataTransform } from '../../utils';
+import { IPeripheralResponse } from '../../../peripherals/types/peripherals';
+import { intl } from '../../../../core/helpers/i18nHelper';
 
 export interface IProps {
   setSelected: (items: string[]) => void;
+  gatewayPeripherals: IPeripheralResponse[];
+  status: 'error' | 'warning' | undefined;
+  setStatus: (status: any) => void;
 }
-// const initialTargetKeys = mockData.filter((item) => Number(item.key) > 10).map((item) => item.key);
 
-const PeripheralsTransfer: React.FC<IProps> = ({ setSelected }: IProps) => {
-  const { isOpen } = useAppSelector((state) => state.gateway);
+const PeripheralsTransfer: React.FC<IProps> = ({ setSelected, gatewayPeripherals, status, setStatus }: IProps) => {
+  const { isOpen, isOpenEdit } = useAppSelector((state) => state.gateway);
   const { peripherals } = useAppSelector((state) => state.peripheral);
 
-  const data: RecordType[] = peripherals.map((e, i) => ({
-    key: e._id.toString(),
-    title: `${e.vendor}`,
-    description: `${e.vendor}-${e._id}`,
-  }));
-  const initialTargetKeys = data.map((item) => item.key);
-  const [targetKeys, setTargetKeys] = useState(initialTargetKeys);
-  const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+  const [data, setData] = useState<RecordType[]>([]);
+  const [targetKeys, setTargetKeys] = useState<string[]>([]);
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen || isOpenEdit) {
       dispatch(getPeripherals());
     }
-  }, [isOpen]);
+  }, [isOpen, isOpenEdit]);
 
-  // const initialTargetKeys = useMemo(
-  //   () =>
-  //     peripherals.filter((item) => Number(item._id) > 10).map((item) => item._id),
-  //   [peripherals]
-  // );
+  useEffect(() => {
+    if (peripherals.length > 0) {
+      setData(dataTransform(peripherals, intl));
+    }
+    if (gatewayPeripherals?.length > 0) {
+      setTargetKeys(dataTransform(gatewayPeripherals || [], intl).map((item) => item.key));
+    }
+  }, [gatewayPeripherals, peripherals]);
 
-  const onChange = (nextTargetKeys: string[], direction: TransferDirection, moveKeys: string[]) => {
-    setTargetKeys(nextTargetKeys);
-    setSelected(nextTargetKeys);
-  };
+  const handleChange = (newTargetKeys: string[], direction: TransferDirection, moveKeys: string[]) => {
+    const total = [...targetKeys];
+    if (total.length === 10 || newTargetKeys.length > 10) {
+      setStatus('error');
+    } else {
+      setStatus('');
+    }
 
-  const onSelectChange = (sourceSelectedKeys: string[], targetSelectedKeys: string[]) => {
-    setSelectedKeys([...sourceSelectedKeys, ...targetSelectedKeys]);
+    setTargetKeys(newTargetKeys);
+    setSelected(newTargetKeys);
   };
 
   return (
     <Transfer
       dataSource={data}
-      titles={['Source', 'Target']}
+      listStyle={{
+        width: 200,
+        height: 200,
+        justifyContent: 'center',
+      }}
       targetKeys={targetKeys}
-      selectedKeys={selectedKeys}
-      onChange={onChange}
-      onSelectChange={onSelectChange}
+      onChange={handleChange}
       render={(item) => item.description}
+      status={status}
     />
   );
 };

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { debounce, isEmpty } from 'lodash';
-import { useAppSelector, useAppDispatch } from '../../../app/hooks';
-import { logout, reset } from '../../users/store/authSlice';
 import styled from 'styled-components';
-import { Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import { LogoutOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+
+import { useAppDispatch } from '../../../app/hooks';
+import { logout, reset } from '../../users/store/authSlice';
+import { intl } from '../../../core/helpers/i18nHelper';
 
 export const MenuItemContainer = styled.div`
   display: flex;
@@ -27,7 +28,6 @@ export const NavigationDiv = styled.div`
 const MenuItems: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const { user } = useAppSelector((state) => state.auth);
 
   const onLogout = () => {
     dispatch(logout());
@@ -38,18 +38,14 @@ const MenuItems: React.FC = () => {
   const loginActions = () => {
     return (
       <li>
-        <Button type="link" icon={<LogoutOutlined />} onClick={onLogout}>
-          Logout
+        <Button type="primary" icon={<LogoutOutlined />} onClick={onLogout}>
+          {intl('logout')}
         </Button>
       </li>
     );
   };
   return (
     <MenuItemContainer>
-      {/* <div className="logo">
-        <Link to={'/dashboard'}>Gateway List</Link>
-      </div> */}
-
       <ul>{loginActions()}</ul>
     </MenuItemContainer>
   );

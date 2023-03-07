@@ -1,8 +1,8 @@
 import { RootState } from '../../../app/store';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-import peripheralService from '../services/peripheralService';
 import { IInitialState, IPeripheral, IPeripheralResponse } from '../types/peripherals';
+import peripheralService from '../services/peripheralService';
 
 const initialState: IInitialState = {
   peripherals: [],
@@ -16,12 +16,9 @@ const initialState: IInitialState = {
 
 // Register user
 export const getAll = createAsyncThunk<
-  // Return type of the payload creator
   IPeripheralResponse[],
-  // First argument to the payload creator
   undefined,
   {
-    // Optional fields for defining thunkApi field types
     state: RootState;
   }
 >('peripheral/getAll', async (_, thunkAPI) => {
@@ -82,13 +79,13 @@ export const peripheralSlice = createSlice({
       .addCase(createPeripheral.fulfilled, (state, action) => {
         state.isFormLoading = false;
         state.isSuccess = true;
+        state.isOpen = false;
         state.peripherals.push(action.payload);
       })
       .addCase(createPeripheral.rejected, (state, action) => {
         state.isFormLoading = false;
         state.isError = true;
         state.message = action.payload as string;
-        state.peripherals = [];
       });
   },
 });

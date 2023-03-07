@@ -1,24 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './modules/common/components/MenuItems';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ProtectedRoute from './routes/ProtectedRoute';
 import 'antd/dist/reset.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import { I18nextProvider, useTranslation } from 'react-i18next';
+
+import { usei18nAntd } from './core/hooks/usei18nAntd';
+import { initTranslation } from './core/helpers/i18nHelper';
+import Login from './modules/security/components/Login';
+import ProtectedRoute from './routes/ProtectedRoute';
 import Theme from './core/theme/theme';
 import GlobalStyles from './core/theme/global';
-import { ConfigProvider } from 'antd';
 import MainLayout from './layout/components/MainLayout';
 import ErrorPage from './modules/common/components/ErrorPage';
 import GatewayList from './modules/gateways/components/GatewayList';
-import { usei18nAntd } from './core/hooks/usei18nAntd';
-import { initTranslation } from './core/helpers/i18nHelper';
-import { I18nextProvider, useTranslation } from 'react-i18next';
 import i18n from './core/config/i18n/i18n';
 import PeripheralList from './modules/peripherals/components/PeripheralList';
+import Dashboard from './modules/security/pages/Dashboard';
+import Register from './modules/security/components/Register';
 
 const App: React.FunctionComponent = () => {
   const { locale } = usei18nAntd();
@@ -73,7 +72,6 @@ const App: React.FunctionComponent = () => {
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </Router>
-            <ToastContainer />
           </>
         </Theme>
       </ConfigProvider>

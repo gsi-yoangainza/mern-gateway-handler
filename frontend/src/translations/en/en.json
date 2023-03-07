@@ -19,8 +19,6 @@
 
   "accept": "Accept",
 
-  "editProfile": "Editar perfil",
-
   "deleted": "Deleted",
 
   "deletedUser": "Deleted user",
@@ -33,19 +31,66 @@
 
   "peripherals": "Peripherals",
 
+  "edit": "Edit",
+
+  "details": "Details",
+
+  "remove": "Remove",
+
+  "register": "Register",
+
+  "pleaseCreateAccount": "Please create an account",
+
+  "login": "Log in",
+
+  "logout": "Logout",
+
+  "warningDelete": "Do you want to delete the item?",
+
+  "properties": "Properties",
+
+  "passwordValidation": "Passwords do not match",
+
+  "gatewayHandler": "Gateway Handler",
+
+  "gatewayDashboard": "Gateways Dashboard",
+
+  "welcome": "Welcome",
+
+  "signUp": "Sign Up",
+
+  "noAccount": "You don't have an account?",
+
+  "haveAccount": "You already have an account?",
+
+  "dashboard": "Dashboard",
+
   "gateway": {
     "addGateway": "Add Gateway",
+    "editGateway": "Edit Gateway",
     "serialNumber": "Serial number",
     "name": "Name",
     "ipv4Address": "IPv4 Address",
     "peripherals": "Peripherals",
-    "ipv4AddressValidation": "Invalid IPv4 Address provided"
+    "ipv4AddressValidation": "Invalid IPv4 Address provided",
+    "gatewayDetails": "Gateway Details",
+    "createdAt": "Creation Date",
+    "updatedAt": "Update Date",
+    "user": "User",
+    "peripheralAmountValidation": "Only 10 peripherals are allowed for every gateway",
+    "successfullyCreated": "The gateway was successfully created",
+    "successfullyEdited": "The gateway was successfully edited",
+    "successfullyDeleted": "The gateway was successfully deleted",
+    "onlyNameLastName": "Solo se admiten entre 1 y 50 caracteres (letras con  espacios, apóstrofos  y guiones intermedios)"
   },
   "peripheral": {
     "addPeripheral": "Add Peripheral",
     "vendor": "Vendor",
     "status": "Status",
     "online": "Online",
-    "offline": "Offline"
+    "offline": "Offline",
+    "createdAt": "Creation Date",
+    "updatedAt": "Update Date",
+    "user": "User"
   }
 }

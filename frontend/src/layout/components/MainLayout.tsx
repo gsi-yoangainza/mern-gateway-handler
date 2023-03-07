@@ -1,29 +1,19 @@
 import React, { useMemo, useState } from 'react';
-import { Button, Divider, Layout, Menu, MenuProps, Space } from 'antd';
+import { Layout, Menu, MenuProps } from 'antd';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import MenuItems from '../../modules/common/components/MenuItems';
-import { StyledHeader, StyledMenu } from '../styled';
-import { LogoutOutlined } from '@ant-design/icons';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { logout, reset } from '../../modules/users/store/authSlice';
-import { intl } from '../../core/helpers/i18nHelper';
+import { DashboardFilled } from '@ant-design/icons';
 
-const { Header, Content, Footer } = Layout;
+import { StyledHeader, StyledLayout, StyledMenu } from '../styled';
+import { intl } from '../../core/helpers/i18nHelper';
+import MenuItems from '../../modules/common/components/MenuItems';
+
+const { Content, Footer } = Layout;
 
 interface IProps {
   component?: string;
-  // children: React.ReactNode;
 }
 
 const MainLayout: React.FC<IProps> = (props: IProps) => {
-  const dispatch = useAppDispatch();
-  const { user } = useAppSelector((state) => state.auth);
-
-  const onLogout = () => {
-    dispatch(logout());
-    dispatch(reset());
-    // navigate('/login');
-  };
   const location = useLocation();
   const findName = useMemo(
     () =>
@@ -40,18 +30,21 @@ const MainLayout: React.FC<IProps> = (props: IProps) => {
     setCurrent(e.key);
   };
   return (
-    <Layout>
+    <StyledLayout>
       <StyledHeader>
-        <div
+        <h1
           style={{
-            float: 'left',
-            width: 120,
-            height: 31,
-            margin: '16px 24px 16px 0',
+            marginRight: '20px',
             background: 'rgba(30, 23, 23, 0.2)',
+            padding: 2,
           }}
-          className="asdasdasd"
-        />
+        >
+          <Link to={'/dashboard'}>
+            <span className="title-icon-dashboard">
+              <DashboardFilled /> {intl('dashboard')}
+            </span>
+          </Link>
+        </h1>
         <StyledMenu theme="light" mode="horizontal" id="sidebar-menu" selectedKeys={[current]} onClick={onClick}>
           <Menu.Item key="1">
             <Link to={'/gateways'}>{intl('gateways')}</Link>
@@ -68,8 +61,10 @@ const MainLayout: React.FC<IProps> = (props: IProps) => {
         </div>
         <Outlet />
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Gateway Handler ©2023 Created by youstrauss91</Footer>
-    </Layout>
+      <Footer style={{ textAlign: 'center' }}>
+        {intl('gatewayHandler')} ©{new Date().getFullYear()} Created by youstrauss91
+      </Footer>
+    </StyledLayout>
   );
 };
 

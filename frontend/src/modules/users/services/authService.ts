@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { IUser } from '../../../pages/Register';
+
+import { IUser } from '../../security/types';
 
 const API_URL = '/api/users/';
 
