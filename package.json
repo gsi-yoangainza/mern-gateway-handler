@@ -6,8 +6,12 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
+    "serverinstall": "npm install",
+    "clientinstall": "npm install --prefix frontend",
+    "buildclient": "npm run build --prefix frontend",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "deploy": "npm install && npm run clientinstall && npm run buildclient && npm run server"
   },
   "author": "You",
   "license": "ISC",

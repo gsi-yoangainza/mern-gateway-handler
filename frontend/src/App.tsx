@@ -41,7 +41,7 @@ const App: React.FunctionComponent = () => {
           <>
             <Router>
               <Routes>
-                <Route path="" element={<MainLayout />}>
+                <Route element={<MainLayout />}>
                   <Route
                     path="/dashboard"
                     element={
@@ -68,6 +68,7 @@ const App: React.FunctionComponent = () => {
                   />
                 </Route>
                 <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
