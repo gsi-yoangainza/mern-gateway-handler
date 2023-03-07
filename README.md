@@ -11,7 +11,7 @@ MERN stack is the idea of using Javascript/Node for fullstack web development.
 
 ## clone or download
 ```terminal
-$ git clone https://github.com/amazingandyyy/mern.git
+$ git clone https://github.com/gsi-yoangainza/mern-gateway-handler.git
 $ yarn # or npm i
 ```
 
@@ -42,14 +42,13 @@ notice, you need client and server runs concurrently in different terminal sessi
 $ cd frontend          // go to frontend folder
 $ npm i              // npm install packages
 $ cd ..             // go back to the root folder of the project
-$ npm run start        // run it locally
+$ npm run dev        // it runs both backend and frontend
 
 // deployment for client app
 $ npm run build // this will compile the react code using webpack and generate a folder called docs in the root level
 ```
 
-## Server-side usage(PORT: 8000)
-
+## Server-side usage(PORT: 5000)
 
 ### Prepare you MongoDB URI
 
@@ -68,8 +67,15 @@ MONGO_URI:  mongodb+srv://<user>:<password>@cluster0.vf2mool.mongodb.net/app?ret
 
 `JWT_SECRET=YOUR_JWT_SECRET`  in src/.env
 
+### Other constants in .env file
 
-## Deploy Server locally
+```
+You need to add a `NODE_ENV=<VALUE>` and set it with `development` or `production`
+
+You cand add a `PORT=<PORT_NUMBER>` in order to use that instead of default port configured in the backend
+```
+
+## Deploy Server Locally
 This command will install all dependencies of both projects(frontend and backend) and then start the backend server
 
 ```terminal
